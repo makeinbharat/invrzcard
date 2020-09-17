@@ -1,0 +1,42 @@
+.card_holder{
+    width: 500px;
+    height: 250px;
+    margin: 200px;
+    box-shadow: 3px 3px 9px #acacac;
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: #fcfcfc;
+    background: radial-gradient(circle at top left, #de1738, #990066);
+
+
+    .name{
+        display: block;
+        font-size: 42px;
+        font-family: 'Barlow', 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Roboto';
+        font-weight: bold;
+        line-height: 1.2;
+    }
+
+    .position{
+        display: block;
+        font-size: 22px;
+        font-family: 'Barlow', 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Roboto';
+        line-height: 1.2;
+    }
+
+    .contact{
+        display: block;
+        font-size: 20px;
+        font-family: 'Barlow', 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Roboto';
+        position: relative;
+        top: 120px;
+    }
+
+    .email{
+        display: block;
+        font-size: 20px;
+        font-family: 'Barlow', 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Roboto';
+        position: relative;
+        top: 130px;
+    }
+}
