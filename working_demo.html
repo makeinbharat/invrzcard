@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./styles/style.css" type="text/css" rel="stylesheet">
+    <link href="./styles/grid.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+    <title>Basic Card Design</title>
+</head>
+<body>
+    <div class="visible">
+        <div class="column large4 medium6 small12" style="display: block; margin: auto;">
+            <label>Name</label>
+            <input type="text" class="skeu" id="nameip" required /><br /><br />
+            <label>Position</label>
+            <input type="text" class="skeu" id="posip" required /><br /><br />
+            <label>Organization</label>
+            <input type="text" class="skeu" id="orgip" required /><br /><br />
+            <label>Contact Number 1</label>
+            <input type="text" class="skeu" value="+91" id="ct1ip" required /><br /><br />
+            <label>Contact Number 2 - Optional</label>
+            <input type="text" class="skeu" value="+91" id="ct2ip" /><br /><br />
+            <label>Email Address</label>
+            <input type="text" class="skeu" id="emailip" required /><br /><br />
+            <button class="skeu submit" onclick="showcard();">Proceed</button>
+        </div>
+    </div>
+
+    <div class="hidden">
+        <div class="column large4 medium6 small12" style="display: block; margin: auto;">
+            <div class="card_holder">
+                <span class="name" id="name">Name</span>
+                <span class="position"><span id="pos">Position</span>, <span id="org">Organization</span></span>
+                <span class="contact"><span id="ct1">Phone Number 1, </span><span id="ct2">Phone Number 2</span></span>
+                <span class="email" id="email">Email Address</span>
+            </div>    
+        </div>
+    </div>
+
+    <script>
+        function showcard(){
+            document.getElementById("name").innerHTML=document.getElementById("nameip").value;
+            document.getElementById("pos").innerHTML=document.getElementById("posip").value;
+            document.getElementById("org").innerHTML=document.getElementById("orgip").value;
+            document.getElementById("ct1").innerHTML=document.getElementById("ct1ip").value;
+            if(document.getElementById("ct2")=="+91")
+                document.getElementById("ct2").innerHTML=", " + document.getElementById("ct2ip").value;
+            else
+                document.getElementById("ct2").innerHTML=" ";
+            document.getElementById("email").innerHTML=document.getElementById("emailip").value;
+        }
+    </script>
+</body>
+</html>
